@@ -14,7 +14,7 @@
       --muted:#9ca3af;
       --muted2:#6b7280;
 
-      /* premium tweaks */
+      /* premium glass */
       --border: rgba(148,163,184,.14);
       --glass: rgba(2,6,23,.62);
       --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 18px 40px rgba(0,0,0,.35);
@@ -23,13 +23,18 @@
 
     * { box-sizing: border-box; }
 
+    html{
+      scroll-behavior: smooth;
+    }
+
     body{
       margin:0;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
       color:var(--text);
       line-height:1.7;
+      overflow-x: hidden;
 
-      /* richer background */
+      /* rich background */
       background:
         radial-gradient(900px 450px at 15% 10%, rgba(56,189,248,.12), transparent 60%),
         radial-gradient(800px 420px at 85% 25%, rgba(99,102,241,.12), transparent 60%),
@@ -37,7 +42,32 @@
         var(--bg);
     }
 
+    /* subtle animated glow layer */
+    body::before{
+      content:"";
+      position: fixed;
+      inset: -20vh -20vw;
+      pointer-events: none;
+      background:
+        radial-gradient(600px 300px at 20% 15%, rgba(56,189,248,.10), transparent 60%),
+        radial-gradient(520px 280px at 85% 35%, rgba(99,102,241,.10), transparent 62%),
+        radial-gradient(520px 260px at 50% 90%, rgba(16,185,129,.07), transparent 60%);
+      filter: blur(10px);
+      opacity: .75;
+      transform: translate3d(0,0,0);
+      animation: drift 18s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes drift{
+      0%   { transform: translate3d(-1.2%, -0.8%, 0) scale(1); opacity:.72; }
+      50%  { transform: translate3d(1.3%,  1.0%, 0) scale(1.03); opacity:.82; }
+      100% { transform: translate3d(-1.2%, -0.8%, 0) scale(1); opacity:.72; }
+    }
+
     .container{
+      position: relative;
+      z-index: 1;
       max-width: 980px;
       margin: 0 auto;
       padding: 88px 24px;
@@ -65,6 +95,12 @@
     .brandline .dot{
       width:8px;height:8px;border-radius:999px;
       background: rgba(229,231,235,.75);
+      box-shadow: 0 0 0 6px rgba(229,231,235,.03);
+      animation: pulse 3.6s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100% { transform: scale(1); opacity:.9; }
+      50%     { transform: scale(1.12); opacity:1; }
     }
     .brandline .sep{ opacity:.6; }
 
@@ -91,6 +127,12 @@
       font-size: 12px;
       vertical-align: middle;
       margin-left: 10px;
+      transition: transform .35s ease, border-color .35s ease, background .35s ease;
+    }
+    .pill:hover{
+      transform: translateY(-1px);
+      border-color: rgba(229,231,235,.20);
+      background: rgba(2,6,23,.70);
     }
 
     .block{
@@ -113,7 +155,6 @@
 
     .muted{ color: var(--muted); }
 
-    /* premium typography width */
     .prose{
       max-width: 68ch;
     }
@@ -126,7 +167,7 @@
     }
 
     /* glass cards */
-    .card{
+    .card, .thanks-item{
       background: var(--glass);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -134,6 +175,15 @@
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+      transform: translate3d(0,0,0);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+      will-change: transform;
+    }
+
+    .card:hover, .thanks-item:hover{
+      transform: translateY(-4px);
+      border-color: rgba(229,231,235,.18);
+      box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 26px 60px rgba(0,0,0,.45);
     }
 
     .card h3{
@@ -151,19 +201,13 @@
 
     .thanks{
       display: grid;
-      gap: 12px;
+      gap: 14px;
       margin-top: 18px;
       grid-template-columns: 1fr;
     }
 
     .thanks-item{
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 18px 20px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
     }
 
     .thanks-item b{
@@ -184,27 +228,45 @@
       justify-content: space-between;
     }
 
+    /* reveal animation (premium, subtle) */
+    .reveal{
+      opacity: 0;
+      transform: translateY(10px);
+      filter: blur(2px);
+      transition: opacity .75s ease, transform .75s ease, filter .75s ease;
+    }
+    .reveal.is-visible{
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
     @media (min-width: 860px){
       .thanks{
         grid-template-columns: 1fr 1fr;
-        gap: 14px;
       }
-      .thanks-item{
-        padding: 18px 22px;
-      }
+      .thanks-item{ padding: 18px 22px; }
     }
 
     @media (max-width: 560px){
       h1{ font-size: 40px; }
       .subtitle{ font-size: 18px; }
       .container{ padding: 64px 18px; }
+      .card:hover, .thanks-item:hover{ transform: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      body::before, .brandline .dot{ animation: none; }
+      .reveal{ opacity: 1; transform: none; filter: none; }
+      .card, .thanks-item, .pill{ transition: none; }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <header>
+    <header class="reveal">
       <h1>ELVIUM Group</h1>
 
       <div class="brandline">
@@ -221,7 +283,7 @@
       </p>
     </header>
 
-    <section class="block" aria-label="Вступление">
+    <section class="block reveal" aria-label="Вступление">
       <h2>ELVIUM</h2>
       <div class="prose">
         <p><b>ELVIUM Group</b> — группа бизнес-проектов и операционных направлений.</p>
@@ -232,25 +294,25 @@
       </div>
     </section>
 
-    <section class="block" aria-label="Направления">
+    <section class="block reveal" aria-label="Направления">
       <h2>Направления</h2>
       <div class="cards">
-        <div class="card">
+        <div class="card reveal">
           <h3>Логистика и экспедиция</h3>
           <p>Управление перевозками, экспедирование, собственный и привлечённый транспорт.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <h3>Аренда техники</h3>
           <p>Техника и решения под задачи бизнеса и инфраструктуры.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <h3>IT / AI решения</h3>
           <p>Автоматизация процессов, цифровые продукты и прикладные AI-инструменты.</p>
         </div>
       </div>
     </section>
 
-    <section class="block" aria-label="Благодарности">
+    <section class="block reveal" aria-label="Благодарности">
       <h2>Благодарности</h2>
       <div class="prose">
         <p class="muted">
@@ -259,18 +321,18 @@
       </div>
 
       <div class="thanks">
-        <div class="thanks-item"><b>Костасу</b> — за опыт, добытый тяжёлым трудом, и за активное развитие компании, которое продолжается до сих пор.</div>
-        <div class="thanks-item"><b>Марине Васильевне</b> — за заботу и участие. Она больше, чем бухгалтер: человек, который бережёт устойчивость компании и спокойствие внутри неё.</div>
-        <div class="thanks-item"><b>Людмиле</b> — за энергию, настойчивость и работу на результат.</div>
-        <div class="thanks-item"><b>Владиславу</b> — за системность, самоотдачу и веру в наше дело. За ответственность, дисциплину и фундамент, на котором компания развивается сегодня.</div>
-        <div class="thanks-item"><b>Ивану</b> — за доверие и помощь на старте: в момент, когда по формальным причинам нам было сложнее запускаться, он подставил плечо и помог сделать первый шаг.</div>
-        <div class="thanks-item"><b>Камилле</b> — за внесение в жизнь компании порядка и яркости.</div>
-        <div class="thanks-item"><b>Мушегу Виуловичу</b> — нашему инвестору и человеку, который поверил в проект.</div>
-        <div class="thanks-item"><b>И, конечно, Давиду</b> — за направление, риск и ответственность, взятые на себя с самого начала.</div>
+        <div class="thanks-item reveal"><b>Костасу</b> — за опыт, добытый тяжёлым трудом, и за активное развитие компании, которое продолжается до сих пор.</div>
+        <div class="thanks-item reveal"><b>Марине Васильевне</b> — за заботу и участие. Она больше, чем бухгалтер: человек, который бережёт устойчивость компании и спокойствие внутри неё.</div>
+        <div class="thanks-item reveal"><b>Людмиле</b> — за энергию, настойчивость и работу на результат.</div>
+        <div class="thanks-item reveal"><b>Владиславу</b> — за системность, самоотдачу и веру в наше дело. За ответственность, дисциплину и фундамент, на котором компания развивается сегодня.</div>
+        <div class="thanks-item reveal"><b>Ивану</b> — за доверие и помощь на старте: в момент, когда по формальным причинам нам было сложнее запускаться, он подставил плечо и помог сделать первый шаг.</div>
+        <div class="thanks-item reveal"><b>Камилле</b> — за внесение в жизнь компании порядка и яркости.</div>
+        <div class="thanks-item reveal"><b>Мушегу Виуловичу</b> — нашему инвестору и человеку, который поверил в проект.</div>
+        <div class="thanks-item reveal"><b>И, конечно, Давиду</b> — за направление, риск и ответственность, взятые на себя с самого начала.</div>
       </div>
     </section>
 
-    <section class="block" aria-label="О компании сегодня">
+    <section class="block reveal" aria-label="О компании сегодня">
       <h2>О компании сегодня</h2>
       <div class="prose">
         <p class="muted">
@@ -282,10 +344,32 @@
       </div>
     </section>
 
-    <footer>
+    <footer class="reveal">
       <div>© ELVIUM Group</div>
       <div class="pill">Сайт в стадии развития</div>
     </footer>
   </div>
+
+  <script>
+    // Premium reveal on scroll (subtle, performant)
+    (function () {
+      const items = Array.from(document.querySelectorAll('.reveal'));
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+      items.forEach(el => io.observe(el));
+    })();
+  </script>
 </body>
 </html>
