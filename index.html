@@ -3,117 +3,288 @@
 <head>
   <meta charset="UTF-8" />
   <title>ELVIUM Group</title>
+  <meta name="description" content="ELVIUM Group — группа бизнес-проектов. Благодарности команде. Компания зарегистрирована 18.07.2025." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+    :root{
+      --bg:#0f172a;
+      --panel:#020617;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --muted2:#6b7280;
+
+      /* premium tweaks */
+      --border: rgba(148,163,184,.14);
+      --glass: rgba(2,6,23,.62);
+      --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 18px 40px rgba(0,0,0,.35);
+      --radius: 16px;
     }
 
-    .container {
-      max-width: 880px;
+    * { box-sizing: border-box; }
+
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      line-height:1.7;
+
+      /* richer background */
+      background:
+        radial-gradient(900px 450px at 15% 10%, rgba(56,189,248,.12), transparent 60%),
+        radial-gradient(800px 420px at 85% 25%, rgba(99,102,241,.12), transparent 60%),
+        radial-gradient(700px 380px at 50% 95%, rgba(16,185,129,.08), transparent 55%),
+        var(--bg);
+    }
+
+    .container{
+      max-width: 980px;
       margin: 0 auto;
-      padding: 80px 24px;
+      padding: 88px 24px;
     }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 16px;
-      letter-spacing: 0.5px;
+    header{ margin-bottom: 64px; }
+
+    h1{
+      font-size: 56px;
+      margin: 0 0 12px;
+      letter-spacing: .2px;
+      line-height: 1.06;
     }
 
-    .subtitle {
+    .brandline{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color: var(--muted2);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+    }
+    .brandline .dot{
+      width:8px;height:8px;border-radius:999px;
+      background: rgba(229,231,235,.75);
+    }
+    .brandline .sep{ opacity:.6; }
+
+    .subtitle{
       font-size: 20px;
-      color: #9ca3af;
-      margin-bottom: 56px;
+      color: var(--muted);
+      margin: 0 0 12px;
+      max-width: 72ch;
     }
 
-    .block {
-      border-top: 1px solid #1f2933;
-      padding-top: 40px;
-    }
-
-    .block h2 {
-      font-size: 28px;
-      margin-bottom: 24px;
-    }
-
-    .list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      background: #020617;
-      border: 1px solid #1f2933;
-      border-radius: 12px;
-      padding: 24px;
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-    }
-
-    .card p {
-      margin: 0;
-      color: #9ca3af;
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
-    footer {
-      margin-top: 80px;
+    .meta{
+      color: var(--muted2);
       font-size: 14px;
-      color: #6b7280;
+      margin: 0;
+    }
+
+    .pill{
+      display:inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(2,6,23,.55);
+      color: var(--muted);
+      font-size: 12px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    .block{
+      border-top: 1px solid var(--border);
+      padding-top: 44px;
+      margin-top: 44px;
+    }
+
+    h2{
+      font-size: 30px;
+      margin: 0 0 18px;
+      letter-spacing: .2px;
+      line-height: 1.15;
+    }
+
+    p{
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+
+    .muted{ color: var(--muted); }
+
+    /* premium typography width */
+    .prose{
+      max-width: 68ch;
+    }
+
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    /* glass cards */
+    .card{
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .thanks{
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+      grid-template-columns: 1fr;
+    }
+
+    .thanks-item{
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .thanks-item b{
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    footer{
+      margin-top: 88px;
+      border-top: 1px solid var(--border);
+      padding-top: 22px;
+      color: var(--muted2);
+      font-size: 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px 18px;
+      align-items:center;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 860px){
+      .thanks{
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .thanks-item{
+        padding: 18px 22px;
+      }
+    }
+
+    @media (max-width: 560px){
+      h1{ font-size: 40px; }
+      .subtitle{ font-size: 18px; }
+      .container{ padding: 64px 18px; }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>ELVIUM Group</h1>
-    <div class="subtitle">
-      Группа бизнес-проектов и операционных направлений
-    </div>
+    <header>
+      <h1>ELVIUM Group</h1>
 
-    <div class="block">
+      <div class="brandline">
+        <span class="dot"></span>
+        <span>EST. 18.07.2025</span>
+        <span class="sep">•</span>
+        <span>Operational Group</span>
+      </div>
+
+      <p class="subtitle">Группа бизнес-проектов и операционных направлений</p>
+
+      <p class="meta">
+        Компания зарегистрирована <span class="pill">18.07.2025</span>
+      </p>
+    </header>
+
+    <section class="block" aria-label="Вступление">
+      <h2>ELVIUM</h2>
+      <div class="prose">
+        <p><b>ELVIUM Group</b> — группа бизнес-проектов и операционных направлений.</p>
+        <p class="muted">
+          С самого начала мы понимали простую вещь: любой устойчивый бизнес строится не из процессов и техники,
+          а из людей, которые берут на себя ответственность и доводят дело до результата.
+        </p>
+      </div>
+    </section>
+
+    <section class="block" aria-label="Направления">
       <h2>Направления</h2>
-
-      <div class="list">
+      <div class="cards">
         <div class="card">
           <h3>Логистика и экспедиция</h3>
-          <p>
-            Управление перевозками, экспедирование,
-            собственный и привлечённый транспорт.
-          </p>
+          <p>Управление перевозками, экспедирование, собственный и привлечённый транспорт.</p>
         </div>
-
         <div class="card">
           <h3>Аренда техники</h3>
-          <p>
-            Спецтехника и транспорт под задачи бизнеса
-            и инфраструктуры.
-          </p>
+          <p>Техника и решения под задачи бизнеса и инфраструктуры.</p>
         </div>
-
         <div class="card">
           <h3>IT / AI решения</h3>
-          <p>
-            Автоматизация процессов, цифровые продукты
-            и прикладные AI-инструменты.
-          </p>
+          <p>Автоматизация процессов, цифровые продукты и прикладные AI-инструменты.</p>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="block" aria-label="Благодарности">
+      <h2>Благодарности</h2>
+      <div class="prose">
+        <p class="muted">
+          ELVIUM выражает искреннюю благодарность людям, без которых этот путь был бы невозможен.
+        </p>
+      </div>
+
+      <div class="thanks">
+        <div class="thanks-item"><b>Костасу</b> — за опыт, добытый тяжёлым трудом, и за активное развитие компании, которое продолжается до сих пор.</div>
+        <div class="thanks-item"><b>Марине Васильевне</b> — за заботу и участие. Она больше, чем бухгалтер: человек, который бережёт устойчивость компании и спокойствие внутри неё.</div>
+        <div class="thanks-item"><b>Людмиле</b> — за энергию, настойчивость и работу на результат.</div>
+        <div class="thanks-item"><b>Владиславу</b> — за системность, самоотдачу и веру в наше дело. За ответственность, дисциплину и фундамент, на котором компания развивается сегодня.</div>
+        <div class="thanks-item"><b>Ивану</b> — за доверие и помощь на старте: в момент, когда по формальным причинам нам было сложнее запускаться, он подставил плечо и помог сделать первый шаг.</div>
+        <div class="thanks-item"><b>Камилле</b> — за внесение в жизнь компании порядка и яркости.</div>
+        <div class="thanks-item"><b>Мушегу Виуловичу</b> — нашему инвестору и человеку, который поверил в проект.</div>
+        <div class="thanks-item"><b>И, конечно, Давиду</b> — за направление, риск и ответственность, взятые на себя с самого начала.</div>
+      </div>
+    </section>
+
+    <section class="block" aria-label="О компании сегодня">
+      <h2>О компании сегодня</h2>
+      <div class="prose">
+        <p class="muted">
+          Мы не стремимся выглядеть завершёнными. <b>ELVIUM</b> — компания в процессе роста, развития и выстраивания устойчивых решений.
+        </p>
+        <p class="muted">
+          Этот сайт — отражение пути, а не витрина. Работа продолжается.
+        </p>
+      </div>
+    </section>
 
     <footer>
-      © ELVIUM Group · Сайт в стадии развития
+      <div>© ELVIUM Group</div>
+      <div class="pill">Сайт в стадии развития</div>
     </footer>
   </div>
 </body>
