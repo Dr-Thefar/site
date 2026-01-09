@@ -3,373 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <title>ELVIUM Group</title>
-  <meta name="description" content="ELVIUM Group — группа бизнес-проектов. Благодарности команде. Компания зарегистрирована 18.07.2025." />
+  <meta name="description" content="ELVIUM Group — операционная группа. Грузоперевозки, управление техникой, вакансии, принципы компании." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
     :root{
       --bg:#0f172a;
-      --panel:#020617;
       --text:#e5e7eb;
       --muted:#9ca3af;
       --muted2:#6b7280;
-
-      /* premium glass */
       --border: rgba(148,163,184,.14);
       --glass: rgba(2,6,23,.62);
       --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 18px 40px rgba(0,0,0,.35);
       --radius: 16px;
     }
-
-    * { box-sizing: border-box; }
-
-    html{
-      scroll-behavior: smooth;
-    }
-
+    *{ box-sizing:border-box; }
     body{
       margin:0;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
       color:var(--text);
-      line-height:1.7;
-      overflow-x: hidden;
-
-      /* rich background */
+      line-height:1.6;
       background:
         radial-gradient(900px 450px at 15% 10%, rgba(56,189,248,.12), transparent 60%),
         radial-gradient(800px 420px at 85% 25%, rgba(99,102,241,.12), transparent 60%),
-        radial-gradient(700px 380px at 50% 95%, rgba(16,185,129,.08), transparent 55%),
         var(--bg);
     }
-
-    /* subtle animated glow layer */
-    body::before{
-      content:"";
-      position: fixed;
-      inset: -20vh -20vw;
-      pointer-events: none;
-      background:
-        radial-gradient(600px 300px at 20% 15%, rgba(56,189,248,.10), transparent 60%),
-        radial-gradient(520px 280px at 85% 35%, rgba(99,102,241,.10), transparent 62%),
-        radial-gradient(520px 260px at 50% 90%, rgba(16,185,129,.07), transparent 60%);
-      filter: blur(10px);
-      opacity: .75;
-      transform: translate3d(0,0,0);
-      animation: drift 18s ease-in-out infinite;
-      z-index: 0;
-    }
-
-    @keyframes drift{
-      0%   { transform: translate3d(-1.2%, -0.8%, 0) scale(1); opacity:.72; }
-      50%  { transform: translate3d(1.3%,  1.0%, 0) scale(1.03); opacity:.82; }
-      100% { transform: translate3d(-1.2%, -0.8%, 0) scale(1); opacity:.72; }
-    }
-
     .container{
-      position: relative;
-      z-index: 1;
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 88px 24px;
+      max-width:980px;
+      margin:0 auto;
+      padding:80px 24px;
     }
-
-    header{ margin-bottom: 64px; }
-
     h1{
-      font-size: 56px;
-      margin: 0 0 12px;
-      letter-spacing: .2px;
-      line-height: 1.06;
+      font-size:48px;
+      margin:0 0 12px;
     }
-
+    .subtitle{
+      font-size:18px;
+      color:rgba(229,231,235,.85);
+      max-width:70ch;
+    }
     .brandline{
       display:flex;
-      align-items:center;
       gap:10px;
-      color: var(--muted2);
-      font-size: 12px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin: 0 0 16px;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted2);
+      margin-bottom:14px;
     }
-    .brandline .dot{
-      width:8px;height:8px;border-radius:999px;
-      background: rgba(229,231,235,.75);
-      box-shadow: 0 0 0 6px rgba(229,231,235,.03);
-      animation: pulse 3.6s ease-in-out infinite;
+    .grid{
+      margin-top:36px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
     }
-    @keyframes pulse{
-      0%,100% { transform: scale(1); opacity:.9; }
-      50%     { transform: scale(1.12); opacity:1; }
+    a.card{
+      text-decoration:none;
+      color:inherit;
+      background:var(--glass);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+      transition:transform .3s ease;
     }
-    .brandline .sep{ opacity:.6; }
-
-    .subtitle{
-      font-size: 20px;
-      color: var(--muted);
-      margin: 0 0 12px;
-      max-width: 72ch;
+    a.card:hover{ transform:translateY(-3px); }
+    .card h2{
+      font-size:16px;
+      margin:0 0 6px;
     }
-
-    .meta{
-      color: var(--muted2);
-      font-size: 14px;
-      margin: 0;
-    }
-
-    .pill{
-      display:inline-block;
-      padding: 7px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(2,6,23,.55);
-      color: var(--muted);
-      font-size: 12px;
-      vertical-align: middle;
-      margin-left: 10px;
-      transition: transform .35s ease, border-color .35s ease, background .35s ease;
-    }
-    .pill:hover{
-      transform: translateY(-1px);
-      border-color: rgba(229,231,235,.20);
-      background: rgba(2,6,23,.70);
-    }
-
-    .block{
-      border-top: 1px solid var(--border);
-      padding-top: 44px;
-      margin-top: 44px;
-    }
-
-    h2{
-      font-size: 30px;
-      margin: 0 0 18px;
-      letter-spacing: .2px;
-      line-height: 1.15;
-    }
-
-    p{
-      margin: 0 0 16px;
-      color: var(--text);
-    }
-
-    .muted{ color: var(--muted); }
-
-    .prose{
-      max-width: 68ch;
-    }
-
-    .cards{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    /* glass cards */
-    .card, .thanks-item{
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      transform: translate3d(0,0,0);
-      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
-      will-change: transform;
-    }
-
-    .card:hover, .thanks-item:hover{
-      transform: translateY(-4px);
-      border-color: rgba(229,231,235,.18);
-      box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 26px 60px rgba(0,0,0,.45);
-    }
-
-    .card h3{
-      margin: 0 0 8px;
-      font-size: 16px;
-      letter-spacing: .2px;
-    }
-
     .card p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.55;
+      margin:0;
+      font-size:15px;
+      color:rgba(229,231,235,.7);
     }
-
-    .thanks{
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-      grid-template-columns: 1fr;
-    }
-
-    .thanks-item{
-      padding: 18px 20px;
-    }
-
-    .thanks-item b{
-      color: var(--text);
-      font-weight: 650;
-    }
-
     footer{
-      margin-top: 88px;
-      border-top: 1px solid var(--border);
-      padding-top: 22px;
-      color: var(--muted2);
-      font-size: 14px;
+      margin-top:48px;
+      border-top:1px solid var(--border);
+      padding-top:16px;
+      font-size:14px;
+      color:rgba(148,163,184,.7);
       display:flex;
+      justify-content:space-between;
       flex-wrap:wrap;
-      gap: 10px 18px;
-      align-items:center;
-      justify-content: space-between;
-    }
-
-    /* reveal animation (premium, subtle) */
-    .reveal{
-      opacity: 0;
-      transform: translateY(10px);
-      filter: blur(2px);
-      transition: opacity .75s ease, transform .75s ease, filter .75s ease;
-    }
-    .reveal.is-visible{
-      opacity: 1;
-      transform: translateY(0);
-      filter: blur(0);
-    }
-
-    @media (min-width: 860px){
-      .thanks{
-        grid-template-columns: 1fr 1fr;
-      }
-      .thanks-item{ padding: 18px 22px; }
-    }
-
-    @media (max-width: 560px){
-      h1{ font-size: 40px; }
-      .subtitle{ font-size: 18px; }
-      .container{ padding: 64px 18px; }
-      .card:hover, .thanks-item:hover{ transform: none; }
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      html{ scroll-behavior: auto; }
-      body::before, .brandline .dot{ animation: none; }
-      .reveal{ opacity: 1; transform: none; filter: none; }
-      .card, .thanks-item, .pill{ transition: none; }
+      gap:12px;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <header class="reveal">
+    <header>
       <h1>ELVIUM Group</h1>
-
       <div class="brandline">
-        <span class="dot"></span>
         <span>EST. 18.07.2025</span>
-        <span class="sep">•</span>
+        <span>•</span>
         <span>Operational Group</span>
       </div>
-
-      <p class="subtitle">Группа бизнес-проектов и операционных направлений</p>
-
-      <p class="meta">
-        Компания зарегистрирована <span class="pill">18.07.2025</span>
+      <p class="subtitle">
+        Операционная группа. Мы управляем процессами, техникой и людьми, выстраивая устойчивые бизнес-направления.
       </p>
     </header>
 
-    <section class="block reveal" aria-label="Вступление">
-      <h2>ELVIUM</h2>
-      <div class="prose">
-        <p><b>ELVIUM Group</b> — группа бизнес-проектов и операционных направлений.</p>
-        <p class="muted">
-          С самого начала мы понимали простую вещь: любой устойчивый бизнес строится не из процессов и техники,
-          а из людей, которые берут на себя ответственность и доводят дело до результата.
-        </p>
-      </div>
-    </section>
+    <div class="grid">
+      <a href="freight.html" class="card">
+        <h2>Грузоперевозки</h2>
+        <p>Организация и управление грузоперевозками для клиентов.</p>
+      </a>
 
-    <section class="block reveal" aria-label="Направления">
-      <h2>Направления</h2>
-      <div class="cards">
-        <div class="card reveal">
-          <h3>Логистика и экспедиция</h3>
-          <p>Управление перевозками, экспедирование, собственный и привлечённый транспорт.</p>
-        </div>
-        <div class="card reveal">
-          <h3>Аренда техники</h3>
-          <p>Техника и решения под задачи бизнеса и инфраструктуры.</p>
-        </div>
-        <div class="card reveal">
-          <h3>IT / AI решения</h3>
-          <p>Автоматизация процессов, цифровые продукты и прикладные AI-инструменты.</p>
-        </div>
-      </div>
-    </section>
+      <a href="fleet.html" class="card">
+        <h2>Найм техники</h2>
+        <p>Берём вашу технику под управление с комиссией.</p>
+      </a>
 
-    <section class="block reveal" aria-label="Благодарности">
-      <h2>Благодарности</h2>
-      <div class="prose">
-        <p class="muted">
-          ELVIUM выражает искреннюю благодарность людям, без которых этот путь был бы невозможен.
-        </p>
-      </div>
+      <a href="jobs.html" class="card">
+        <h2>Вакансии</h2>
+        <p>Работа в операционной компании. Люди — основа ELVIUM.</p>
+      </a>
 
-      <div class="thanks">
-        <div class="thanks-item reveal"><b>Костасу</b> — за опыт, добытый тяжёлым трудом, и за активное развитие компании, которое продолжается до сих пор.</div>
-        <div class="thanks-item reveal"><b>Марине Васильевне</b> — за заботу и участие. Она больше, чем бухгалтер: человек, который бережёт устойчивость компании и спокойствие внутри неё.</div>
-        <div class="thanks-item reveal"><b>Людмиле</b> — за энергию, настойчивость и работу на результат.</div>
-        <div class="thanks-item reveal"><b>Владиславу</b> — за системность, самоотдачу и веру в наше дело. За ответственность, дисциплину и фундамент, на котором компания развивается сегодня.</div>
-        <div class="thanks-item reveal"><b>Ивану</b> — за доверие и помощь на старте: в момент, когда по формальным причинам нам было сложнее запускаться, он подставил плечо и помог сделать первый шаг.</div>
-        <div class="thanks-item reveal"><b>Камилле</b> — за внесение в жизнь компании порядка и яркости.</div>
-        <div class="thanks-item reveal"><b>Мушегу Виуловичу</b> — нашему инвестору и человеку, который поверил в проект.</div>
-        <div class="thanks-item reveal"><b>И, конечно, Давиду</b> — за направление, риск и ответственность, взятые на себя с самого начала.</div>
-      </div>
-    </section>
+      <a href="principles.html" class="card">
+        <h2>Принципы компании</h2>
+        <p>Философия, ценности и благодарности команде.</p>
+      </a>
+    </div>
 
-    <section class="block reveal" aria-label="О компании сегодня">
-      <h2>О компании сегодня</h2>
-      <div class="prose">
-        <p class="muted">
-          Мы не стремимся выглядеть завершёнными. <b>ELVIUM</b> — компания в процессе роста, развития и выстраивания устойчивых решений.
-        </p>
-        <p class="muted">
-          Этот сайт — отражение пути, а не витрина. Работа продолжается.
-        </p>
-      </div>
-    </section>
-
-    <footer class="reveal">
+    <footer>
       <div>© ELVIUM Group</div>
-      <div class="pill">Сайт в стадии развития</div>
+      <div>Сайт в стадии развития</div>
     </footer>
   </div>
-
-  <script>
-    // Premium reveal on scroll (subtle, performant)
-    (function () {
-      const items = Array.from(document.querySelectorAll('.reveal'));
-      if (!('IntersectionObserver' in window)) {
-        items.forEach(el => el.classList.add('is-visible'));
-        return;
-      }
-
-      const io = new IntersectionObserver((entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            e.target.classList.add('is-visible');
-            io.unobserve(e.target);
-          }
-        }
-      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-
-      items.forEach(el => io.observe(el));
-    })();
-  </script>
 </body>
 </html>
