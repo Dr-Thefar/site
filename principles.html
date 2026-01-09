@@ -261,11 +261,45 @@
       .reveal{ opacity: 1; transform: none; filter: none; }
       .card, .thanks-item, .pill{ transition: none; }
     }
+
+    .top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom: 36px;
+}
+
+a.link{
+  color:rgba(229,231,235,.88);
+  text-decoration:none;
+  border:1px solid var(--border);
+  background: rgba(2,6,23,.45);
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+  transition: border-color .3s ease, background .3s ease, transform .3s ease;
+}
+
+a.link:hover{
+  border-color: rgba(229,231,235,.22);
+  background: rgba(2,6,23,.65);
+  transform: translateY(-1px);
+}
   </style>
 </head>
 
 <body>
   <div class="container">
+    <div class="top reveal">
+  <div style="color:rgba(148,163,184,.8);font-size:14px;">
+    ELVIUM Group
+  </div>
+  <div>
+    <a class="link" href="index.html">← На главную</a>
+  </div>
+</div>
     <header class="reveal">
       <h1>ELVIUM Group</h1>
 
