@@ -33,3 +33,44 @@
     }
   });
 })();
+
+(() => {
+  const btn = document.querySelector(".nav-toggle");
+  const drawer = document.querySelector('[data-drawer="nav"]');
+  const backdrop = document.querySelector('[data-backdrop="nav"]');
+  const closeBtn = document.querySelector(".nav-close");
+
+  if (!btn || !drawer || !backdrop || !closeBtn) return;
+
+  const open = () => {
+    document.body.classList.add("nav-open");
+    btn.setAttribute("aria-expanded", "true");
+    drawer.setAttribute("aria-hidden", "false");
+    backdrop.setAttribute("aria-hidden", "false");
+  };
+
+  const close = () => {
+    document.body.classList.remove("nav-open");
+    btn.setAttribute("aria-expanded", "false");
+    drawer.setAttribute("aria-hidden", "true");
+    backdrop.setAttribute("aria-hidden", "true");
+  };
+
+  btn.addEventListener("click", () => {
+    document.body.classList.contains("nav-open") ? close() : open();
+  });
+
+  closeBtn.addEventListener("click", close);
+  backdrop.addEventListener("click", close);
+
+  // ESC to close
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+
+  // Close drawer when clicking a link
+  drawer.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (a) close();
+  });
+})();
