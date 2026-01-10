@@ -6,21 +6,30 @@
   <meta name="description" content="ELVIUM Group — операционная группа. Грузоперевозки, управление техникой, вакансии, принципы компании." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 
-  <div class="topbar">
+  <!-- HEADER / TOPBAR -->
+  <header class="topbar">
     <div class="wrap">
       <div class="topbar-inner">
+
+        <!-- LOGO -->
         <a class="brand" href="/">
-          <div class="logo" aria-hidden="true"></div>
+          <img
+            src="/site/assets/img/logo-elvium.png"
+            alt="ELVIUM Group"
+            class="brand-logo"
+          />
           <div class="brand-title">
             <b>ELVIUM Group</b>
             <span>Operational Group</span>
           </div>
         </a>
 
+        <!-- NAV -->
         <nav class="nav" aria-label="Навигация">
           <a href="/">Главная</a>
           <a href="/pages/freight.html">Грузоперевозки</a>
@@ -29,28 +38,42 @@
           <a href="/pages/principles.html">Принципы</a>
         </nav>
 
+        <!-- CTA -->
         <div class="cta-row">
           <a class="btn" href="/pages/principles.html">О компании</a>
         </div>
+
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="hero">
+  <!-- HERO -->
+  <section class="hero">
     <div class="wrap">
       <div class="hero-card reveal">
-        <div class="kicker"><span class="dot" aria-hidden="true"></span><span>EST. 18.07.2025 · Operational Group</span></div>
-        <h1>Операционная группа, которая<br>держит процесс.</h1>
+        <div class="kicker">
+          <span class="dot" aria-hidden="true"></span>
+          <span>EST. 18.07.2025 · Operational Group</span>
+        </div>
+
+        <h1>
+          Операционная группа, которая<br>
+          держит процесс.
+        </h1>
+
         <div class="lead">
-          Грузоперевозки для клиентов · Управление техникой для партнёров · Команда и вакансии · Принципы компании.
+          Грузоперевозки для клиентов · Управление техникой для партнёров ·
+          Команда и вакансии · Принципы компании.
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- CARDS -->
   <section class="cards">
     <div class="wrap">
       <div class="grid-2">
+
         <a class="card reveal" href="/pages/freight.html">
           <strong>Грузоперевозки</strong>
           <p>Организация перевозок и управление исполнением.</p>
@@ -70,10 +93,12 @@
           <strong>Принципы</strong>
           <p>Ценности и благодарность команде.</p>
         </a>
+
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap">
       <div class="foot">
@@ -92,6 +117,7 @@
     </div>
   </footer>
 
+  <!-- JS -->
   <script src="/assets/js/site.js"></script>
 </body>
 </html>
