@@ -6,20 +6,19 @@
   <meta name="description" content="ELVIUM Group — операционная группа. Грузоперевозки, управление техникой, вакансии, принципы компании." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 
-  <!-- HEADER / TOPBAR -->
+  <!-- TOPBAR / HEADER -->
   <header class="topbar">
     <div class="wrap">
       <div class="topbar-inner">
 
-        <!-- LOGO -->
+        <!-- BRAND -->
         <a class="brand" href="/">
           <img
-            src="/site/assets/img/logo-elvium.png"
+            src="assets/img/logo-elvium.png"
             alt="ELVIUM Group"
             class="brand-logo"
           />
@@ -29,7 +28,14 @@
           </div>
         </a>
 
-        <!-- NAV -->
+        <!-- BURGER (MOBILE) -->
+        <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <!-- NAV (DESKTOP) -->
         <nav class="nav" aria-label="Навигация">
           <a href="/">Главная</a>
           <a href="/pages/freight.html">Грузоперевозки</a>
@@ -38,14 +44,37 @@
           <a href="/pages/principles.html">Принципы</a>
         </nav>
 
-        <!-- CTA -->
+        <!-- CTA (DESKTOP) -->
         <div class="cta-row">
-          <a class="btn" href="/pages/principles.html">О компании</a>
+          <a class="btn btn-primary" href="/pages/principles.html">О компании</a>
         </div>
 
       </div>
     </div>
   </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav-drawer" data-drawer="nav" aria-hidden="true">
+    <div class="nav-drawer-inner">
+      <div class="nav-drawer-head">
+        <span class="nav-drawer-title">Меню</span>
+        <button class="nav-close" type="button" aria-label="Закрыть меню">✕</button>
+      </div>
+
+      <div class="nav-drawer-links">
+        <a href="/">Главная</a>
+        <a href="/pages/freight.html">Грузоперевозки</a>
+        <a href="/pages/fleet.html">Найм техники</a>
+        <a href="/pages/jobs.html">Вакансии</a>
+        <a href="/pages/principles.html">Принципы</a>
+      </div>
+
+      <div class="nav-drawer-cta">
+        <a class="btn btn-primary" href="/pages/principles.html">О компании</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-backdrop" data-backdrop="nav" aria-hidden="true"></div>
 
   <!-- HERO -->
   <section class="hero">
@@ -56,14 +85,10 @@
           <span>EST. 18.07.2025 · Operational Group</span>
         </div>
 
-        <h1>
-          Операционная группа, которая<br>
-          держит процесс.
-        </h1>
+        <h1>Операционная группа, которая<br>держит процесс.</h1>
 
         <div class="lead">
-          Грузоперевозки для клиентов · Управление техникой для партнёров ·
-          Команда и вакансии · Принципы компании.
+          Грузоперевозки для клиентов · Управление техникой для партнёров · Команда и вакансии · Принципы компании.
         </div>
       </div>
     </div>
@@ -117,7 +142,6 @@
     </div>
   </footer>
 
-  <!-- JS -->
   <script src="/assets/js/site.js"></script>
 </body>
 </html>
