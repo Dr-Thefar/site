@@ -6,82 +6,43 @@
   <meta name="description" content="ELVIUM Group — управление вашей техникой с комиссией. Страница в разработке." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    :root{
-      --bg:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --muted2:#6b7280;
-      --border: rgba(148,163,184,.14);
-      --glass: rgba(2,6,23,.62);
-      --shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 18px 40px rgba(0,0,0,.35);
-      --radius: 16px;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      color:var(--text);
-      line-height:1.65;
-      background:
-        radial-gradient(900px 450px at 15% 10%, rgba(56,189,248,.12), transparent 60%),
-        radial-gradient(800px 420px at 85% 25%, rgba(99,102,241,.12), transparent 60%),
-        var(--bg);
-    }
-    .container{ max-width:980px; margin:0 auto; padding:76px 24px; }
-    .top{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
-    a.link{
-      color:rgba(229,231,235,.88);
-      text-decoration:none;
-      border:1px solid var(--border);
-      background: rgba(2,6,23,.45);
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:13px;
-    }
-    a.link:hover{ border-color: rgba(229,231,235,.22); }
-    h1{ margin:18px 0 10px; font-size:44px; line-height:1.08; }
-    .sub{ color:rgba(229,231,235,.75); max-width:72ch; margin:0; }
-    .panel{
-      margin-top:28px;
-      background:var(--glass);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px 20px;
-    }
-    .k{ color:var(--muted2); font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 6px; }
-    .muted{ color:var(--muted); }
-    footer{
-      margin-top:34px; border-top:1px solid var(--border); padding-top:16px;
-      color:rgba(148,163,184,.72); font-size:14px;
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
-    }
-    @media (max-width:560px){ .container{ padding:64px 18px; } h1{ font-size:36px; } }
-  </style>
+  <!-- Global styles -->
+  <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="top">
-      <div style="color:rgba(148,163,184,.8);font-size:14px;">ELVIUM Group</div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a class="link" href="index.html">← На главную</a>
-        <a class="link" href="principles.html">Принципы</a>
+
+  <main class="container">
+
+    <header class="header">
+      <div class="toprow">
+        <div class="brand-mini">ELVIUM Group</div>
+        <nav class="topnav" aria-label="Навигация">
+          <a class="link" href="/">← На главную</a>
+          <a class="link" href="/pages/principles.html">Принципы</a>
+        </nav>
       </div>
-    </div>
 
-    <h1>Найм техники</h1>
-    <p class="sub">Для партнёров: берём вашу технику под управление, обеспечиваем загрузку, контроль и сопровождение. Работаем за комиссию. Страница в разработке.</p>
+      <h1 class="page-title">Найм техники</h1>
+      <p class="subtitle">
+        Для партнёров: берём вашу технику под управление, обеспечиваем загрузку, контроль и сопровождение.
+        Работаем за комиссию. Страница в разработке.
+      </p>
+    </header>
 
-    <div class="panel">
-      <p class="k">Что будет здесь</p>
+    <section class="panel">
+      <p class="kicker">Что будет здесь</p>
       <p class="muted" style="margin:0;">
         Условия сотрудничества • требования к технике • схема расчётов • SLA/документы • форма заявки партнёра.
       </p>
-    </div>
+    </section>
 
-    <footer>
+    <footer class="footer">
       <div>© ELVIUM Group</div>
-      <div>Страница в стадии развития</div>
+      <div class="muted">Страница в стадии развития</div>
     </footer>
-  </div>
+
+  </main>
+
 </body>
 </html>
