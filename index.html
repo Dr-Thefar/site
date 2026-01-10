@@ -3,66 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <title>ELVIUM Group</title>
-
   <meta name="description" content="ELVIUM Group — операционная группа. Грузоперевозки, управление техникой, вакансии, принципы компании." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Global styles -->
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-
 <body>
 
-  <main class="container">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner">
+        <a class="brand" href="/">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-title">
+            <b>ELVIUM Group</b>
+            <span>Operational Group</span>
+          </div>
+        </a>
 
-    <!-- Header -->
-    <header class="header">
-      <h1 class="logo">ELVIUM Group</h1>
+        <nav class="nav" aria-label="Навигация">
+          <a href="/">Главная</a>
+          <a href="/pages/freight.html">Грузоперевозки</a>
+          <a href="/pages/fleet.html">Найм техники</a>
+          <a href="/pages/jobs.html">Вакансии</a>
+          <a href="/pages/principles.html">Принципы</a>
+        </nav>
 
-      <div class="brandline">
-        <span>EST. 18.07.2025</span>
-        <span>•</span>
-        <span>Operational Group</span>
+        <div class="cta-row">
+          <a class="btn" href="/pages/principles.html">О компании</a>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <p class="subtitle">
-        Операционная группа. Мы управляем процессами, техникой и людьми,
-        выстраивая устойчивые бизнес-направления.
-      </p>
-    </header>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-card reveal">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span><span>EST. 18.07.2025 · Operational Group</span></div>
+        <h1>Операционная группа, которая<br>держит процесс.</h1>
+        <div class="lead">
+          Грузоперевозки для клиентов · Управление техникой для партнёров · Команда и вакансии · Принципы компании.
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Navigation grid -->
-    <section class="grid">
+  <section class="cards">
+    <div class="wrap">
+      <div class="grid-2">
+        <a class="card reveal" href="/pages/freight.html">
+          <strong>Грузоперевозки</strong>
+          <p>Организация перевозок и управление исполнением.</p>
+        </a>
 
-      <a href="/pages/freight.html" class="card">
-        <h2>Грузоперевозки</h2>
-        <p>Организация и управление грузоперевозками для клиентов.</p>
-      </a>
+        <a class="card reveal" href="/pages/fleet.html">
+          <strong>Найм техники</strong>
+          <p>Берём вашу технику под управление за комиссию.</p>
+        </a>
 
-      <a href="/pages/fleet.html" class="card">
-        <h2>Найм техники</h2>
-        <p>Берём вашу технику под управление с комиссией.</p>
-      </a>
+        <a class="card reveal" href="/pages/jobs.html">
+          <strong>Вакансии</strong>
+          <p>Ищем людей, которые любят ответственность и результат.</p>
+        </a>
 
-      <a href="/pages/jobs.html" class="card">
-        <h2>Вакансии</h2>
-        <p>Работа в операционной компании. Люди — основа ELVIUM.</p>
-      </a>
+        <a class="card reveal" href="/pages/principles.html">
+          <strong>Принципы</strong>
+          <p>Ценности и благодарность команде.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
-      <a href="/pages/principles.html" class="card">
-        <h2>Принципы компании</h2>
-        <p>Философия, ценности и благодарности команде.</p>
-      </a>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <div style="letter-spacing:.10em; text-transform:uppercase; color:rgba(231,234,240,.72); font-weight:700;">
+            ELVIUM Group
+          </div>
+          <div style="margin-top:8px; max-width:70ch;">
+            Сайт в стадии развития. Мы строим систему.
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <div>© ELVIUM Group</div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div>© ELVIUM Group</div>
-      <div class="muted">Сайт в стадии развития</div>
-    </footer>
-
-  </main>
-
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
