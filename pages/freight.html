@@ -6,45 +6,90 @@
   <meta name="description" content="ELVIUM Group — организация и управление грузоперевозками. Страница в разработке." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Global styles -->
-  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
-
 <body>
 
-  <main class="container">
+  <!-- Topbar (единый на всем сайте) -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner">
+        <a class="brand" href="/">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-title">
+            <b>ELVIUM Group</b>
+            <span>Operational Group</span>
+          </div>
+        </a>
 
-    <header class="header">
-      <div class="toprow">
-        <div class="brand-mini">ELVIUM Group</div>
-
-        <nav class="topnav" aria-label="Навигация">
-          <a class="link" href="../index.html">← На главную</a>
-          <a class="link" href="./principles.html">Принципы</a>
+        <nav class="nav" aria-label="Навигация">
+          <a href="/">Главная</a>
+          <a href="/pages/freight.html">Грузоперевозки</a>
+          <a href="/pages/fleet.html">Найм техники</a>
+          <a href="/pages/jobs.html">Вакансии</a>
+          <a href="/pages/principles.html">Принципы</a>
         </nav>
+
+        <div class="cta-row">
+          <a class="btn" href="/pages/principles.html">Принципы</a>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <h1 class="page-title">Грузоперевозки</h1>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-card reveal">
+        <div class="kicker">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Клиентам · Организация перевозок</span>
+        </div>
+        <h1>Грузоперевозки</h1>
+        <div class="lead">
+          Организация и управление грузоперевозками для клиентов.
+          Страница в разработке — скоро добавим формат работы, географию и контакты.
+        </div>
 
-      <p class="subtitle">
-        Организация и управление грузоперевозками для клиентов.
-        Страница в разработке — скоро добавим формат работы, географию и контакты.
-      </p>
-    </header>
+        <div class="hero-actions">
+          <a class="btn primary" href="/pages/principles.html">Принципы компании</a>
+          <a class="btn" href="/">На главную</a>
+        </div>
 
-    <section class="panel">
-      <p class="kicker">Что будет здесь</p>
-      <p class="muted" style="margin:0;">
-        Услуги • порядок работы • сроки и документы • ответственность • быстрый способ оставить заявку.
-      </p>
-    </section>
+        <div class="hint">Сайт — прототип. Контент и форма заявки добавляются следующим этапом.</div>
+      </div>
+    </div>
+  </div>
 
-    <footer class="footer">
-      <div>© ELVIUM Group</div>
-      <div class="muted">Страница в стадии развития</div>
-    </footer>
+  <!-- Content -->
+  <section class="cards">
+    <div class="wrap">
+      <div class="grid-2">
+        <div class="card reveal">
+          <div class="pill">Скоро</div>
+          <strong>Что будет здесь</strong>
+          <p>Услуги · порядок работы · сроки и документы · ответственность · быстрый способ оставить заявку.</p>
+        </div>
 
-  </main>
+        <div class="card reveal">
+          <div class="pill">Для клиентов</div>
+          <strong>Формат работы</strong>
+          <p>Коротко и по делу: что делаем, как считаем, как сопровождаем, как фиксируем обязательства.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot">
+        <div>© ELVIUM Group</div>
+        <div>Страница в стадии развития</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
