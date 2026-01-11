@@ -633,15 +633,46 @@ body.contact-open .contact-sheet{
   .hero{ padding:44px 0 34px; }
 }
 
-/* Desktop: hide bottom UI + overlays */
+/* Desktop: hide bottom UI + keep contact as centered modal */
 @media (min-width: 921px){
-  .bottom-nav,
-  .contact-backdrop,
-  .contact-sheet,
-  .nav-backdrop,
-  .nav-drawer{
-    display:none !important;
+  /* bottom-nav только для мобилы */
+  .bottom-nav{ display:none !important; }
+  .has-bottom-nav{ padding-bottom:0; }
+
+  /* contact должен работать и на десктопе */
+  .contact-backdrop{ display:block !important; }
+  .contact-sheet{ display:block !important; }
+
+  /* центруем как модалку */
+  .contact-sheet{
+    left:50%;
+    right:auto;
+    bottom:auto;
+    top:50%;
+    width:min(520px, calc(100% - 32px));
+    padding:16px;
+
+    /* закрыто по умолчанию */
+    transform:translate(-50%, calc(-50% + 18px));
+    opacity:0;
+    visibility:hidden;
+    transition:
+      transform .2s ease,
+      opacity .18s ease,
+      visibility 0s linear .18s;
   }
 
-  .has-bottom-nav{ padding-bottom:0; }
+  /* “ручка” не нужна на десктопе */
+  .contact-handle{ display:none; }
+
+  /* когда открыто — видно и ровно по центру */
+  body.contact-open .contact-sheet{
+    transform:translate(-50%, -50%);
+    opacity:1;
+    visibility:visible;
+    transition:
+      transform .2s ease,
+      opacity .18s ease,
+      visibility 0s;
+  }
 }
