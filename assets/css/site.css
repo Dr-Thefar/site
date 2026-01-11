@@ -597,10 +597,35 @@ body.contact-open .contact-sheet{
 
 /* The key fix for iPhone widths: icon-only bottom nav */
 @media (max-width: 420px){
-  .bottom-nav{ gap:6px; padding:8px; }
-  .bn-item{ justify-content:center; gap:0; }
-  .bn-txt{ display:none; }
-  .bn-ico{ width:18px; height:18px; }
+  .bottom-nav{
+    gap:6px;
+    padding:8px;
+  }
+
+  .bn-item{
+    flex-direction: column;
+    justify-content: center;
+    gap:4px;
+    padding:6px 4px;
+  }
+
+  .bn-ico{
+    width:18px;
+    height:18px;
+  }
+
+  .bn-txt{
+    display:block;
+    font-size:11px;
+    line-height:1;
+    letter-spacing:.02em;
+    color: rgba(11,18,32,.72);
+  }
+
+  .bn-cta .bn-txt{
+    color: rgba(11,18,32,.9);
+    font-weight:700;
+  }
 }
 
 @media (max-width: 560px){
