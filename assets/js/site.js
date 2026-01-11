@@ -70,7 +70,9 @@
 
   if (navOpenBtn && drawer && backdrop && drawerCloseBtn) {
     // ensure aria defaults
-    if (!navOpenBtn.hasAttribute("aria-expanded")) navOpenBtn.setAttribute("aria-expanded", "false");
+    if (!navOpenBtn.hasAttribute("aria-expanded")) {
+      navOpenBtn.setAttribute("aria-expanded", "false");
+    }
 
     navOpenBtn.addEventListener("click", () => {
       body.classList.contains("nav-open") ? closeDrawer() : openDrawer();
@@ -92,7 +94,8 @@
   const bottomNav = document.querySelector(".bottom-nav");
   if (bottomNav) body.classList.add("has-bottom-nav");
 
-  const contactOpenBtn = document.querySelector("[data-contact-open]");
+  // ✅ FIX: support multiple open buttons (header + bottom)
+  const contactOpenBtns = Array.from(document.querySelectorAll("[data-contact-open]"));
   const contactCloseBtn = document.querySelector("[data-contact-close]");
   const contactBackdrop = document.querySelector(".contact-backdrop");
 
@@ -106,8 +109,8 @@
     body.classList.remove("contact-open");
   };
 
-  if (contactOpenBtn && contactCloseBtn && contactBackdrop) {
-    contactOpenBtn.addEventListener("click", openContact);
+  if (contactOpenBtns.length && contactCloseBtn && contactBackdrop) {
+    contactOpenBtns.forEach((btn) => btn.addEventListener("click", openContact));
     contactCloseBtn.addEventListener("click", closeContact);
     contactBackdrop.addEventListener("click", closeContact);
   }
