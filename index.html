@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>ELVIUM Group</title>
-  <meta name="description" content="ELVIUM Group — операционная группа. Грузоперевозки, управление техникой, вакансии, принципы компании." />
+  <meta name="description" content="ELVIUM Group — операционная логистика. Полный цикл перевозок для предприятий: сырьё на завод и готовая продукция на продажу. Воронеж · ЦФО." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
+
 <body>
 
   <!-- TOPBAR / HEADER -->
@@ -28,13 +28,14 @@
         <nav class="nav" aria-label="Навигация">
           <a href="/">Главная</a>
           <a href="/pages/freight.html">Грузоперевозки</a>
-          <a href="/pages/fleet.html">Найм техники</a>
+          <a href="/pages/fleet.html">Партнёрам</a>
           <a href="/pages/jobs.html">Вакансии</a>
           <a href="/pages/principles.html">Принципы</a>
         </nav>
 
         <!-- CTA (DESKTOP) -->
         <div class="cta-row">
+          <button class="btn" type="button" data-contact-open>Связаться</button>
           <a class="btn btn-primary" href="/pages/principles.html">О компании</a>
         </div>
 
@@ -42,7 +43,7 @@
     </div>
   </header>
 
-  <!-- MOBILE DRAWER (opens from bottom "Menu" button) -->
+  <!-- MOBILE DRAWER (opens from bottom "Меню") -->
   <div class="nav-drawer" data-drawer="nav" aria-hidden="true">
     <div class="nav-drawer-inner">
       <div class="nav-drawer-head">
@@ -53,7 +54,7 @@
       <div class="nav-drawer-links">
         <a href="/">Главная</a>
         <a href="/pages/freight.html">Грузоперевозки</a>
-        <a href="/pages/fleet.html">Найм техники</a>
+        <a href="/pages/fleet.html">Партнёрам</a>
         <a href="/pages/jobs.html">Вакансии</a>
         <a href="/pages/principles.html">Принципы</a>
       </div>
@@ -71,43 +72,122 @@
       <div class="hero-card reveal">
         <div class="kicker">
           <span class="dot" aria-hidden="true"></span>
-          <span>EST. 18.07.2025 · Operational Group</span>
+          <span>Воронеж · ЦФО · Операционная логистика</span>
         </div>
 
-        <h1>Операционная группа, которая<br>держит процесс.</h1>
+        <h1>Нам доверили управление<br><span style="white-space:nowrap;">1074 фурами</span> —<br>и это число растёт.</h1>
 
         <div class="lead">
-          Грузоперевозки для клиентов · Управление техникой для партнёров · Команда и вакансии · Принципы компании.
+          Мы закрываем полный цикл грузоперевозок для предприятия:
+          привозим сырьё на завод и вывозим готовую продукцию на продажу.
+        </div>
+
+        <div class="hero-actions" style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;">
+          <button class="btn primary" type="button" data-contact-open>Обсудить подключение</button>
+          <a class="btn" href="/pages/fleet.html">Стать партнёром</a>
+        </div>
+
+        <div class="hint" style="margin-top:12px; color:rgba(11,18,32,.60);">
+          Собственный автопарк · Техника партнёров под управлением · Работа с предприятиями
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CARDS -->
+  <!-- SCHEME (сырьё -> завод -> продукция) -->
+  <section class="cards">
+    <div class="wrap">
+
+      <div class="card reveal" style="padding:18px;">
+        <strong>Цикл предприятия, который мы берём в работу</strong>
+        <p style="margin-bottom:14px;">
+          От поставок сырья до отгрузки готовой продукции. Один управляемый процесс.
+        </p>
+
+        <div class="flow-scheme" style="margin:0;">
+          <svg viewBox="0 0 720 140" width="100%" height="auto" aria-hidden="true">
+            <!-- boxes -->
+            <rect x="20"  y="40" rx="16" ry="16" width="200" height="64"></rect>
+            <rect x="260" y="40" rx="16" ry="16" width="200" height="64"></rect>
+            <rect x="500" y="40" rx="16" ry="16" width="200" height="64"></rect>
+
+            <!-- arrows -->
+            <line x1="220" y1="72" x2="260" y2="72"></line>
+            <polygon points="260,72 248,66 248,78"></polygon>
+
+            <line x1="460" y1="72" x2="500" y2="72"></line>
+            <polygon points="500,72 488,66 488,78"></polygon>
+
+            <!-- labels -->
+            <text x="120" y="72">Сырьё</text>
+            <text x="360" y="72">Завод</text>
+            <text x="600" y="72">Готовая продукция</text>
+          </svg>
+
+          <div class="flow-caption">
+            Снабжение → производство → отгрузка. Без разрывов и “перевода стрелок”.
+          </div>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+          <a class="btn" href="/pages/freight.html">Как мы работаем с предприятиями</a>
+          <a class="btn" href="/pages/fleet.html">Подключить технику</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
   <section class="cards">
     <div class="wrap">
       <div class="grid-2">
 
         <a class="card reveal" href="/pages/freight.html">
-          <strong>Грузоперевозки</strong>
-          <p>Организация перевозок и управление исполнением.</p>
+          <strong>Для предприятий</strong>
+          <p>
+            Перевозки по договору: планирование, контроль исполнения,
+            документы и стабильная коммуникация.
+          </p>
         </a>
 
         <a class="card reveal" href="/pages/fleet.html">
-          <strong>Найм техники</strong>
-          <p>Берём вашу технику под управление за комиссию.</p>
+          <strong>Партнёрам с техникой</strong>
+          <p>
+            Подключаем вашу технику к нашей системе управления.
+            1074 фуры партнёров уже в работе — число растёт.
+          </p>
         </a>
 
         <a class="card reveal" href="/pages/jobs.html">
-          <strong>Вакансии</strong>
-          <p>Ищем людей, которые любят ответственность и результат.</p>
+          <strong>Команда</strong>
+          <p>
+            Ищем водителей CE, логистов и менеджера по развитию.
+            Нужны взрослые люди, которым важен результат.
+          </p>
         </a>
 
         <a class="card reveal" href="/pages/principles.html">
           <strong>Принципы</strong>
-          <p>Ценности и благодарность команде.</p>
+          <p>
+            Почему мы строим компанию именно как систему —
+            и кто стоит за ELVIUM.
+          </p>
         </a>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO / SOCIAL PROOF -->
+  <section class="cards">
+    <div class="wrap">
+      <div class="card reveal">
+        <strong>Воронеж — наша база. ЦФО — наша зона работы.</strong>
+        <p style="margin-bottom:0;">
+          В Воронеже мы организуем перевозки для <b>38+ предприятий и производств</b>.
+          Для клиента это выглядит просто: один оператор закрывает всю цепочку.
+        </p>
       </div>
     </div>
   </section>
@@ -121,7 +201,7 @@
             ELVIUM Group
           </div>
           <div style="margin-top:8px; max-width:70ch;">
-            Сайт в стадии развития. Мы строим систему.
+            Сайт в стадии развития. Мы строим систему и показываем процесс честно.
           </div>
         </div>
         <div style="text-align:right;">
@@ -131,7 +211,7 @@
     </div>
   </footer>
 
-  <!-- CONTACT SHEET (Bottom) -->
+  <!-- CONTACT SHEET -->
   <div class="contact-backdrop" aria-hidden="true"></div>
 
   <section class="contact-sheet" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
@@ -147,7 +227,6 @@
 
     <div class="contact-actions">
       <a class="contact-action" href="tel:+79805582208">
-        <!-- Phone icon -->
         <svg class="ca-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M5.2 4.6c.5-1 1.7-1.4 2.7-.9l2.1 1c.9.4 1.3 1.4 1 2.3l-.7 2c-.2.6 0 1.3.5 1.7l2.3 2.3c.4.4 1.1.6 1.7.5l2-.7c.9-.3 1.9.1 2.3 1l1 2.1c.5 1 .1 2.2-.9 2.7l-1.1.6c-1 .5-2.2.6-3.3.2-3-1.2-6.2-3.8-8.6-6.1C5.7 11.3 3.1 8.1 2 5.1c-.4-1.1-.3-2.3.2-3.3l.6-1.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
         </svg>
@@ -161,7 +240,6 @@
       </a>
 
       <a class="contact-action" href="https://t.me/elvium_group" target="_blank" rel="noopener">
-        <!-- Telegram icon -->
         <svg class="ca-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M21.6 4.7 3.8 11.7c-1.1.4-1.1 1.9.1 2.2l4.6 1.3 1.7 5.2c.3 1 1.6 1.2 2.2.4l2.6-3.3 4.7 3.5c.8.6 2 .1 2.2-.9l2.8-14.1c.2-1.2-1-2.1-2.1-1.3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
           <path d="M9 14.9 19.5 7.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
