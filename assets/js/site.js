@@ -1,4 +1,4 @@
-/* ===== ELVIUM site.js (clean) ===== */
+/* ===== ELVIUM site.js (clean, bottom-menu + contact) ===== */
 (() => {
   const body = document.body;
 
@@ -44,32 +44,35 @@
   });
 
   /* ---------------------------
-     3) Burger (mobile drawer)
+     3) Drawer (mobile menu) — opens from bottom button
      --------------------------- */
-  const burgerBtn = document.querySelector(".nav-toggle");
+  const navOpenBtn = document.querySelector("[data-nav-open]"); // bottom "Menu" button
   const drawer = document.querySelector('[data-drawer="nav"]');
   const backdrop = document.querySelector('[data-backdrop="nav"]');
   const drawerCloseBtn = document.querySelector(".nav-close");
 
   const openDrawer = () => {
-    // если открыт контактный sheet — закрываем
+    // if contact is open — close it
     body.classList.remove("contact-open");
 
     body.classList.add("nav-open");
-    burgerBtn?.setAttribute("aria-expanded", "true");
+    navOpenBtn?.setAttribute("aria-expanded", "true");
     drawer?.setAttribute("aria-hidden", "false");
     backdrop?.setAttribute("aria-hidden", "false");
   };
 
   const closeDrawer = () => {
     body.classList.remove("nav-open");
-    burgerBtn?.setAttribute("aria-expanded", "false");
+    navOpenBtn?.setAttribute("aria-expanded", "false");
     drawer?.setAttribute("aria-hidden", "true");
     backdrop?.setAttribute("aria-hidden", "true");
   };
 
-  if (burgerBtn && drawer && backdrop && drawerCloseBtn) {
-    burgerBtn.addEventListener("click", () => {
+  if (navOpenBtn && drawer && backdrop && drawerCloseBtn) {
+    // ensure aria defaults
+    if (!navOpenBtn.hasAttribute("aria-expanded")) navOpenBtn.setAttribute("aria-expanded", "false");
+
+    navOpenBtn.addEventListener("click", () => {
       body.classList.contains("nav-open") ? closeDrawer() : openDrawer();
     });
 
@@ -80,17 +83,12 @@
     drawer.addEventListener("click", (e) => {
       if (e.target.closest("a")) closeDrawer();
     });
-
-    // ESC closes drawer
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeDrawer();
-    });
   }
 
   /* ---------------------------
      4) Bottom nav + Contact sheet
      --------------------------- */
-  // Если на странице есть bottom-nav — добавим отступ, чтобы контент не перекрывался
+  // If bottom nav exists — add safe padding
   const bottomNav = document.querySelector(".bottom-nav");
   if (bottomNav) body.classList.add("has-bottom-nav");
 
@@ -99,7 +97,7 @@
   const contactBackdrop = document.querySelector(".contact-backdrop");
 
   const openContact = () => {
-    // если открыт бургер — закрываем
+    // if drawer is open — close it
     closeDrawer();
     body.classList.add("contact-open");
   };
@@ -112,10 +110,14 @@
     contactOpenBtn.addEventListener("click", openContact);
     contactCloseBtn.addEventListener("click", closeContact);
     contactBackdrop.addEventListener("click", closeContact);
-
-    // ESC closes contact sheet
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeContact();
-    });
   }
+
+  /* ---------------------------
+     5) Global ESC — closes everything
+     --------------------------- */
+  window.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    closeContact();
+    closeDrawer();
+  });
 })();
