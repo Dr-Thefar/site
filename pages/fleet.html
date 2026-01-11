@@ -2,25 +2,29 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Найм техники — ELVIUM Group</title>
-  <meta name="description" content="ELVIUM Group — управление вашей техникой с комиссией. Страница в разработке." />
+  <title>Найм техники и управление фурами — ELVIUM Group</title>
+  <meta name="description" content="Берём фуры 20 тонн в управление: загрузка по ЦФО, сопровождение рейсов, документы и бухгалтерия, топливные карты, подбор водителей. Комиссия 14%." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 
-  <div class="topbar">
+  <!-- TOPBAR / HEADER -->
+  <header class="topbar">
     <div class="wrap">
       <div class="topbar-inner">
+
+        <!-- BRAND -->
         <a class="brand" href="/">
-          <div class="logo" aria-hidden="true"></div>
+          <img src="/assets/img/logo-elvium.png" alt="ELVIUM Group" class="brand-logo">
           <div class="brand-title">
             <b>ELVIUM Group</b>
             <span>Operational Group</span>
           </div>
         </a>
 
+        <!-- NAV (DESKTOP) -->
         <nav class="nav" aria-label="Навигация">
           <a href="/">Главная</a>
           <a href="/pages/freight.html">Грузоперевозки</a>
@@ -29,34 +33,111 @@
           <a href="/pages/principles.html">Принципы</a>
         </nav>
 
+        <!-- CTA (DESKTOP) -->
         <div class="cta-row">
-          <a class="btn" href="/">На главную</a>
+          <a class="btn btn-primary" href="/pages/principles.html">О компании</a>
         </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER (opens from bottom "Меню") -->
+  <div class="nav-drawer" data-drawer="nav" aria-hidden="true">
+    <div class="nav-drawer-inner">
+      <div class="nav-drawer-head">
+        <span class="nav-drawer-title">Меню</span>
+        <button class="nav-close" type="button" aria-label="Закрыть меню">✕</button>
+      </div>
+
+      <div class="nav-drawer-links">
+        <a href="/">Главная</a>
+        <a href="/pages/freight.html">Грузоперевозки</a>
+        <a href="/pages/fleet.html">Найм техники</a>
+        <a href="/pages/jobs.html">Вакансии</a>
+        <a href="/pages/principles.html">Принципы</a>
+      </div>
+
+      <div class="nav-drawer-cta">
+        <a class="btn btn-primary" href="/pages/principles.html">О компании</a>
       </div>
     </div>
   </div>
+  <div class="nav-backdrop" data-backdrop="nav" aria-hidden="true"></div>
 
-  <div class="hero">
+  <!-- HERO -->
+  <section class="hero">
     <div class="wrap">
       <div class="hero-card reveal">
-        <div class="kicker"><span class="dot" aria-hidden="true"></span><span>Для партнёров</span></div>
-        <h1>Найм техники</h1>
-        <div class="lead">
-          Берём вашу технику под управление, обеспечиваем загрузку, контроль и сопровождение. Работаем за комиссию. Страница в разработке.
+        <div class="kicker">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Для собственников техники · 1–15 машин</span>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <section class="cards">
-    <div class="wrap">
-      <div class="grid-2">
-        <div class="card reveal"><strong>Что будет здесь</strong><p>Условия · требования к технике · схема расчётов · документы.</p></div>
-        <div class="card reveal"><strong>Старт сотрудничества</strong><p>Добавим форму партнёра и чек-лист входа.</p></div>
+        <h1>Берём фуры в управление.<br>Загрузка, контроль, документы — под ключ.</h1>
+
+        <div class="lead">
+          Мы не «один диспетчер». Вы подключаете технику к системе ELVIUM: прямые заказчики, сопровождение рейсов, гарантия оплаты и полностью закрытый документооборот.
+        </div>
+
+        <div style="margin-top:14px;">
+          <button class="btn btn-primary" type="button" data-contact-open>
+            Связаться и обсудить подключение
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- CONTENT -->
+  <section class="cards">
+    <div class="wrap">
+      <div class="grid-2">
+
+        <div class="card reveal">
+          <strong>Почему это выгоднее диспетчера</strong>
+          <p>
+            Вы передаёте технику в управление компании: логисты, операционный контроль, сопровождение рейсов, бухгалтерия и документы — всё в одном контуре.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <strong>География и формат</strong>
+          <p>
+            Фуры 20 тонн · ЦФО · работа «в круг» · постоянные направления. Подключаем парк от 1 до 15 машин.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <strong>Что вы получаете</strong>
+          <p>
+            Гарантию оплаты рейса · страхование ответственности · топливные карты (скидка до 20%) · документы и бухгалтерия на нас · при необходимости подбираем водителей.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <strong>Условия</strong>
+          <p>
+            Комиссия — <b>14%</b>. По сути вы получаете не «логиста», а логистическую компанию: прямые заказчики, сопровождение и финансовая дисциплина.
+          </p>
+        </div>
+
+      </div>
+
+      <div style="margin-top:16px;" class="card reveal">
+        <strong>Кому подойдёт</strong>
+        <p style="margin-bottom:10px;">
+          Если у вас 1–несколько машин и вы хотите, чтобы техникой управляла компания — без ручного контроля, постоянных переписок и нервов.
+        </p>
+        <p style="margin:0;">
+          Нажмите <b>«Связаться»</b> — обсудим формат подключения, требования к технике и стартовый сценарий.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap">
       <div class="foot">
@@ -65,6 +146,121 @@
       </div>
     </div>
   </footer>
+
+  <!-- CONTACT SHEET (Bottom) -->
+  <div class="contact-backdrop" aria-hidden="true"></div>
+
+  <section class="contact-sheet" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="contact-handle" aria-hidden="true"></div>
+
+    <div class="contact-head">
+      <div>
+        <div class="contact-title" id="contactTitle">Связаться</div>
+        <div class="contact-sub">Выберите удобный способ</div>
+      </div>
+      <button class="contact-close" type="button" data-contact-close aria-label="Закрыть">✕</button>
+    </div>
+
+    <div class="contact-actions">
+      <a class="contact-action" href="tel:+79805582208">
+        <span class="ca-ico" aria-hidden="true">
+          <!-- phone (clean) -->
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+            <path d="M8.9 3.8c.5-.6 1.4-.8 2.1-.4l2.1 1.3c.8.5 1.1 1.4.7 2.3l-.9 2.1c-.3.7-.1 1.5.5 2.1l2.4 2.4c.6.6 1.4.8 2.1.5l2.1-.9c.9-.4 1.8-.1 2.3.7l1.3 2.1c.4.7.2 1.6-.4 2.1l-1.2 1.2c-.7.7-1.7 1-2.7.8-3.1-.6-6.4-2.6-9.3-5.5-2.9-2.9-4.9-6.2-5.5-9.3-.2-1 .1-2 .8-2.7l1.2-1.2Z"
+                  stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </span>
+
+        <span class="ca-text">
+          <b>Звонок</b>
+          <small>8 (980) 558-22-08</small>
+        </span>
+
+        <span class="ca-go" aria-hidden="true">
+          <!-- chevron -->
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+            <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="contact-action" href="https://t.me/elvium_group" target="_blank" rel="noopener">
+        <span class="ca-ico" aria-hidden="true">
+          <!-- telegram (paper plane) -->
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+            <path d="M21 4L3.6 11.3c-.8.3-.8 1.4 0 1.7l4.4 1.6 1.6 4.4c.3.8 1.4.8 1.7 0L21 4Z"
+                  stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M21 4l-11 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+
+        <span class="ca-text">
+          <b>Telegram</b>
+          <small>@elvium_group</small>
+        </span>
+
+        <span class="ca-go" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+            <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- BOTTOM NAV (Mobile) -->
+  <nav class="bottom-nav" aria-label="Быстрая навигация">
+    <a class="bn-item" href="/">
+      <span class="bn-ico" aria-hidden="true">
+        <!-- home -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M4 10.5 12 4l8 6.5V20a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 20v-9.5Z"
+                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M9.5 21.5v-7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7"
+                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="bn-txt">Главная</span>
+    </a>
+
+    <a class="bn-item" href="/pages/freight.html">
+      <span class="bn-ico" aria-hidden="true">
+        <!-- box -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M21 8.5 12 3 3 8.5 12 14l9-5.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M3 8.5V16l9 5 9-5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M12 14v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="bn-txt">Перевозки</span>
+    </a>
+
+    <button class="bn-item bn-cta" type="button" data-contact-open>
+      <span class="bn-ico" aria-hidden="true">
+        <!-- signal / contact -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M3 12h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M7 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M12 5v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M17 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M21 12h-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="bn-txt">Связаться</span>
+    </button>
+
+    <button class="bn-item" type="button" data-nav-open>
+      <span class="bn-ico" aria-hidden="true">
+        <!-- menu -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M5 7h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="bn-txt">Меню</span>
+    </button>
+  </nav>
 
   <script src="/assets/js/site.js"></script>
 </body>
