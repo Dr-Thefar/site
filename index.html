@@ -17,7 +17,7 @@
 
         <!-- BRAND -->
         <a class="brand" href="/">
-        <img src="assets/img/logo-elvium.png" alt="ELVIUM Group" class="brand-logo">
+          <img src="/assets/img/logo-elvium.png" alt="ELVIUM Group" class="brand-logo">
           <div class="brand-title">
             <b>ELVIUM Group</b>
             <span>Operational Group</span>
@@ -137,6 +137,59 @@
       </div>
     </div>
   </footer>
+
+  <!-- CONTACT SHEET (Bottom) -->
+  <div class="contact-backdrop" aria-hidden="true"></div>
+
+  <section class="contact-sheet" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="contact-handle" aria-hidden="true"></div>
+
+    <div class="contact-head">
+      <div>
+        <div class="contact-title" id="contactTitle">Связаться</div>
+        <div class="contact-sub">Выберите удобный способ</div>
+      </div>
+      <button class="contact-close" type="button" data-contact-close aria-label="Закрыть">✕</button>
+    </div>
+
+    <div class="contact-actions">
+      <a class="contact-action" href="tel:+79805582208">
+        <span class="ca-ico">📞</span>
+        <span class="ca-text">
+          <b>Звонок</b>
+          <small>8 (980) 558-22-08</small>
+        </span>
+        <span class="ca-go">›</span>
+      </a>
+
+      <a class="contact-action" href="https://t.me/elvium_group" target="_blank" rel="noopener">
+        <span class="ca-ico">✈️</span>
+        <span class="ca-text">
+          <b>Telegram</b>
+          <small>@elvium_group</small>
+        </span>
+        <span class="ca-go">›</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- BOTTOM NAV (Mobile) -->
+  <nav class="bottom-nav" aria-label="Быстрая навигация">
+    <a class="bn-item" href="/">
+      <span class="bn-ico">🏠</span>
+      <span class="bn-txt">Главная</span>
+    </a>
+
+    <a class="bn-item" href="/pages/freight.html">
+      <span class="bn-ico">📦</span>
+      <span class="bn-txt">Перевозки</span>
+    </a>
+
+    <button class="bn-item bn-cta" type="button" data-contact-open>
+      <span class="bn-ico">☎️</span>
+      <span class="bn-txt">Связаться</span>
+    </button>
+  </nav>
 
   <script src="/assets/js/site.js"></script>
 </body>
