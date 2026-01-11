@@ -2,26 +2,29 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Грузоперевозки — ELVIUM Group</title>
-  <meta name="description" content="ELVIUM Group — организация и управление грузоперевозками. Страница в разработке." />
+  <title>Грузоперевозки по договору для предприятий — ELVIUM Group</title>
+  <meta name="description" content="Грузоперевозки по договору для предприятий и заводов: фуры 20 тонн, организация перевозок, контроль исполнения, документы, перевозки с НДС. Для снабженцев и логистики." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 
-  <!-- Topbar (единый на всем сайте) -->
-  <div class="topbar">
+  <!-- TOPBAR / HEADER -->
+  <header class="topbar">
     <div class="wrap">
       <div class="topbar-inner">
+
+        <!-- BRAND -->
         <a class="brand" href="/">
-          <div class="logo" aria-hidden="true"></div>
+          <img src="/assets/img/logo-elvium.png" alt="ELVIUM Group" class="brand-logo">
           <div class="brand-title">
             <b>ELVIUM Group</b>
             <span>Operational Group</span>
           </div>
         </a>
 
+        <!-- NAV (DESKTOP) -->
         <nav class="nav" aria-label="Навигация">
           <a href="/">Главная</a>
           <a href="/pages/freight.html">Грузоперевозки</a>
@@ -30,57 +33,127 @@
           <a href="/pages/principles.html">Принципы</a>
         </nav>
 
+        <!-- CTA (DESKTOP) -->
         <div class="cta-row">
-          <a class="btn" href="/pages/principles.html">Принципы</a>
+          <a class="btn btn-primary" href="/pages/principles.html">О компании</a>
         </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav-drawer" data-drawer="nav" aria-hidden="true">
+    <div class="nav-drawer-inner">
+      <div class="nav-drawer-head">
+        <span class="nav-drawer-title">Меню</span>
+        <button class="nav-close" type="button" aria-label="Закрыть меню">✕</button>
+      </div>
+
+      <div class="nav-drawer-links">
+        <a href="/">Главная</a>
+        <a href="/pages/freight.html">Грузоперевозки</a>
+        <a href="/pages/fleet.html">Найм техники</a>
+        <a href="/pages/jobs.html">Вакансии</a>
+        <a href="/pages/principles.html">Принципы</a>
+      </div>
+
+      <div class="nav-drawer-cta">
+        <a class="btn btn-primary" href="/pages/principles.html">О компании</a>
       </div>
     </div>
   </div>
+  <div class="nav-backdrop" data-backdrop="nav" aria-hidden="true"></div>
 
-  <!-- Hero -->
-  <div class="hero">
+  <!-- HERO -->
+  <section class="hero">
     <div class="wrap">
       <div class="hero-card reveal">
         <div class="kicker">
           <span class="dot" aria-hidden="true"></span>
-          <span>Клиентам · Организация перевозок</span>
+          <span>Для предприятий · По договору · Снабжение и логистика</span>
         </div>
-        <h1>Грузоперевозки</h1>
+
+        <h1>Грузоперевозки по договору для предприятий и заводов</h1>
+
         <div class="lead">
-          Организация и управление грузоперевозками для клиентов.
-          Страница в разработке — скоро добавим формат работы, географию и контакты.
+          Организуем грузоперевозки фурами (в том числе фура 20 тонн / еврофура 20 тонн) для юридических лиц.
+          Берём на себя подбор транспорта, контроль исполнения рейса и оформление документов. Работаем в понятном контрактном формате.
         </div>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="/pages/principles.html">Принципы компании</a>
-          <a class="btn" href="/">На главную</a>
-        </div>
-
-        <div class="hint">Сайт — прототип. Контент и форма заявки добавляются следующим этапом.</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Content -->
-  <section class="cards">
-    <div class="wrap">
-      <div class="grid-2">
-        <div class="card reveal">
-          <div class="pill">Скоро</div>
-          <strong>Что будет здесь</strong>
-          <p>Услуги · порядок работы · сроки и документы · ответственность · быстрый способ оставить заявку.</p>
-        </div>
-
-        <div class="card reveal">
-          <div class="pill">Для клиентов</div>
-          <strong>Формат работы</strong>
-          <p>Коротко и по делу: что делаем, как считаем, как сопровождаем, как фиксируем обязательства.</p>
+        <div style="margin-top:14px;">
+          <button class="btn btn-primary" type="button" data-contact-open>
+            Обсудить перевозку по договору
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- CONTENT -->
+  <section class="cards">
+    <div class="wrap">
+
+      <div class="grid-2">
+        <div class="card reveal">
+          <strong>Кому мы полезны</strong>
+          <p>
+            Снабженцам, логистам и отделам закупки: когда нужен подрядчик на перевозки, сроки важны, а процесс должен быть управляемым и документально закрытым.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <strong>Формат работы</strong>
+          <p>
+            По договору: согласование условий, назначение транспорта, сопровождение, контроль отгрузки/выгрузки и закрывающие документы.
+            Это не разовая «машина с площадки», а сервис исполнения.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <strong>Документы и НДС</strong>
+          <p>
+            Подходит для тех, кому важны перевозки для юридических лиц и бухгалтерская чистота:
+            возможна перевозка грузов с НДС (перевозки с НДС) с корректным комплектом документов.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <strong>География</strong>
+          <p>
+            Работаем по ЦФО и по России. Если вам нужны грузоперевозки по России в регулярном режиме — обсуждаем график и закрепляем формат взаимодействия.
+          </p>
+        </div>
+      </div>
+
+      <!-- SEO TEXT (human + intent) -->
+      <div class="card reveal" style="margin-top:16px;">
+        <strong>Организация грузоперевозок: контроль важнее «просто найти фуру»</strong>
+        <p style="margin-bottom:10px;">
+          Когда перевозка — часть производственного процесса, критично не «найти фуру», а обеспечить исполнение: подача транспорта,
+          контроль сроков, связь по рейсу и документы. Поэтому мы выстраиваем организацию грузоперевозок как операционный сервис для предприятий.
+        </p>
+        <p style="margin-bottom:10px;">
+          Чаще всего работаем с задачами снабжения и отгрузок: доставка оборудования, перевозка торгового оборудования,
+          перевозка еврокубов, а также типовые стройгрузы (перевозка арматуры, перевозка ЖБИ, перевозка кирпича) — в рамках договорного взаимодействия.
+          Формат транспорта подбираем под задачу (включая грузоперевозки фура 20 тонн и грузоперевозки фурами).
+        </p>
+        <p style="margin:0;">
+          Нажмите <b>«Обсудить перевозку по договору»</b> — уточним маршрут, требования и предложим рабочий формат.
+        </p>
+      </div>
+
+      <div style="margin-top:16px;" class="card reveal">
+        <strong>Что лучше подготовить для расчёта</strong>
+        <p style="margin:0;">
+          Маршрут (откуда/куда), тип груза, вес/объём, требования к транспорту и сроки. Если есть — фото, схема погрузки и условия по документам (НДС/без НДС).
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap">
       <div class="foot">
@@ -89,6 +162,112 @@
       </div>
     </div>
   </footer>
+
+  <!-- CONTACT SHEET -->
+  <div class="contact-backdrop" aria-hidden="true"></div>
+
+  <section class="contact-sheet" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="contact-handle" aria-hidden="true"></div>
+
+    <div class="contact-head">
+      <div>
+        <div class="contact-title" id="contactTitle">Связаться</div>
+        <div class="contact-sub">Выберите удобный способ</div>
+      </div>
+      <button class="contact-close" type="button" data-contact-close aria-label="Закрыть">✕</button>
+    </div>
+
+    <div class="contact-actions">
+      <a class="contact-action" href="tel:+79805582208">
+        <span class="ca-ico" aria-hidden="true">
+          <!-- phone -->
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+            <path d="M8.9 3.8c.5-.6 1.4-.8 2.1-.4l2.1 1.3c.8.5 1.1 1.4.7 2.3l-.9 2.1c-.3.7-.1 1.5.5 2.1l2.4 2.4c.6.6 1.4.8 2.1.5l2.1-.9c.9-.4 1.8-.1 2.3.7l1.3 2.1c.4.7.2 1.6-.4 2.1l-1.2 1.2c-.7.7-1.7 1-2.7.8-3.1-.6-6.4-2.6-9.3-5.5-2.9-2.9-4.9-6.2-5.5-9.3-.2-1 .1-2 .8-2.7l1.2-1.2Z"
+                  stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="ca-text">
+          <b>Звонок</b>
+          <small>8 (980) 558-22-08</small>
+        </span>
+        <span class="ca-go" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+            <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="contact-action" href="https://t.me/elvium_group" target="_blank" rel="noopener">
+        <span class="ca-ico" aria-hidden="true">
+          <!-- telegram -->
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+            <path d="M21 4L3.6 11.3c-.8.3-.8 1.4 0 1.7l4.4 1.6 1.6 4.4c.3.8 1.4.8 1.7 0L21 4Z"
+                  stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M21 4l-11 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="ca-text">
+          <b>Telegram</b>
+          <small>@elvium_group</small>
+        </span>
+        <span class="ca-go" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+            <path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- BOTTOM NAV (Mobile) -->
+  <nav class="bottom-nav" aria-label="Быстрая навигация">
+    <a class="bn-item" href="/">
+      <span class="bn-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M4 10.5 12 4l8 6.5V20a1.5 1.5 0 0 1-1.5 1.5H5.5A1.5 1.5 0 0 1 4 20v-9.5Z"
+                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M9.5 21.5v-7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7"
+                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="bn-txt">Главная</span>
+    </a>
+
+    <a class="bn-item" href="/pages/freight.html" aria-current="page">
+      <span class="bn-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M21 8.5 12 3 3 8.5 12 14l9-5.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M3 8.5V16l9 5 9-5V8.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M12 14v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="bn-txt">Перевозки</span>
+    </a>
+
+    <button class="bn-item bn-cta" type="button" data-contact-open>
+      <span class="bn-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M3 12h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M7 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M12 5v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M17 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M21 12h-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="bn-txt">Связаться</span>
+    </button>
+
+    <button class="bn-item" type="button" data-nav-open>
+      <span class="bn-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M5 7h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="bn-txt">Меню</span>
+    </button>
+  </nav>
 
   <script src="/assets/js/site.js"></script>
 </body>
